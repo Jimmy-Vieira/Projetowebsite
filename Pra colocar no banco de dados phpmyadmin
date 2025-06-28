@@ -1,0 +1,20 @@
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  email VARCHAR(100) UNIQUE,
+  senha VARCHAR(255)
+);
+
+CREATE TABLE jogos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100),
+  descricao TEXT,
+  criado_por INT,
+  FOREIGN KEY (criado_por) REFERENCES usuarios(id)
+);
+
+Colocar esse Depois do primeiro
+
+ALTER TABLE jogos
+ADD COLUMN categoria VARCHAR(50),
+ADD COLUMN imagem VARCHAR(255);
